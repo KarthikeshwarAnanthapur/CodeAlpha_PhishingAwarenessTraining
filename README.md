@@ -28,9 +28,6 @@
 | HTML5 | Structure & Semantics |
 | CSS3 | Cyberpunk Styling + Glassmorphism |
 | JavaScript (ES6+) | Interactivity, Quiz, Animations |
-| Google Fonts | Orbitron + Poppins + Share Tech Mono |
-| Canvas API | Particle network background |
-| IntersectionObserver | Scroll animations |
 
 ---
 
@@ -58,8 +55,7 @@ SafeBait/
 3. No build tools or dependencies needed!
 
 ```bash
-git clone https://github.com/yourusername/safebait.git
-cd safebait
+git clone https://github.com/KarthikeshwarAnanthapur/CodeAlpha_PhishingAwarenessTraining.git
 # Open index.html in browser
 ```
 
