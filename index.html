@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="SafeBait - Interactive Phishing Awareness Platform. Learn about phishing, social engineering, and cybersecurity best practices."/>
+  <title>SafeBait | Interactive Phishing Awareness Platform</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon.png"/>
+  <link rel="shortcut icon" href="assets/icons/favicon.png"/>
+  <link rel="apple-touch-icon" href="assets/icons/favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">SAFEBAIT</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <div class="loader-text">INITIALIZING SECURITY PROTOCOLS...</div>
+    </div>
+  </div>
+
+  <!-- CANVAS for particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        Safe<span class="neon">Bait</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">Phishing</a></li>
+        <li><a href="#types" class="nav-link">Threats</a></li>
+        <li><a href="#social-eng" class="nav-link">Social Eng.</a></li>
+        <li><a href="#safety" class="nav-link">Safety</a></li>
+        <li><a href="#quiz" class="nav-link">Quiz</a></li>
+        <li><a href="#presentation" class="nav-link">Presentation</a></li>
+        <li><a href="#quiz" class="nav-cta-btn">Start Training</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🛡️ Cybersecurity Awareness Platform</div>
+      <h1 class="hero-title">
+        <span class="title-main">SAFE</span><span class="title-accent">BAIT</span>
+      </h1>
+      <p class="hero-subtitle" id="typingText"></p>
+      <p class="hero-desc">
+        Master the art of identifying phishing attacks, social engineering, and online threats.
+        Your first line of defense starts with knowledge.
+      </p>
+      <div class="hero-buttons">
+        <a href="#quiz" class="btn-primary">
+          <span class="btn-icon">▶</span> Start Training
+        </a>
+        <a href="#types" class="btn-secondary">
+          <span class="btn-icon">⚠</span> Explore Threats
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3.4B</span>
+          <span class="stat-label">Phishing Emails/Day</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">91%</span>
+          <span class="stat-label">Attacks via Email</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">$17.7K</span>
+          <span class="stat-label">Lost Per Minute</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="cyber-shield">
+        <div class="shield-ring ring-1"></div>
+        <div class="shield-ring ring-2"></div>
+        <div class="shield-ring ring-3"></div>
+        <div class="shield-core">🛡️</div>
+        <div class="shield-scan"></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT PHISHING SECTION -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">// MODULE 01</div>
+        <h2 class="section-title">What is <span class="neon">Phishing?</span></h2>
+        <p class="section-subtitle">Understanding the most common cyber threat in the digital world</p>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text" data-animate="fade-left">
+          <p class="about-intro">
+            <strong>Phishing</strong> is a cybercrime where attackers disguise themselves as trusted entities
+            to trick individuals into revealing sensitive information such as passwords, credit card numbers,
+            or personal data.
+          </p>
+          <p class="about-body">
+            Like a fisherman casting bait, cybercriminals craft convincing fake messages — emails, texts,
+            or websites — to "hook" unsuspecting victims. These attacks exploit human psychology rather
+            than technical vulnerabilities.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🎣</span>
+              <span>Disguises as trusted sources</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🧠</span>
+              <span>Exploits human psychology</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <span>Creates urgency to act fast</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🔓</span>
+              <span>Steals credentials & data</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards" data-animate="fade-right">
+          <div class="info-card glass-card">
+            <div class="card-icon neon-icon">📧</div>
+            <h3>How it Works</h3>
+            <p>Attackers send a message mimicking a legitimate source (bank, IT support, etc.) with a malicious link or attachment.</p>
+          </div>
+          <div class="info-card glass-card">
+            <div class="card-icon neon-icon">🎯</div>
+            <h3>The Goal</h3>
+            <p>Steal login credentials, financial data, install malware, or gain unauthorized access to systems.</p>
+          </div>
+          <div class="info-card glass-card">
+            <div class="card-icon neon-icon">📊</div>
+            <h3>The Scale</h3>
+            <p>Over 3.4 billion phishing emails are sent every day, making it the #1 cyber attack vector worldwide.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fake vs Real Email -->
+      <div class="email-comparison" data-animate="fade-up">
+        <h3 class="comparison-title">⚠ Real vs. Fake Email — Can You Spot the Difference?</h3>
+        <div class="email-grid">
+          <div class="email-card legit">
+            <div class="email-label legit-label">✅ LEGITIMATE</div>
+            <div class="email-mock">
+              <div class="email-header-mock">
+                <strong>From:</strong> security@google.com
+                <span class="email-verified">✓ Verified</span>
+              </div>
+              <div class="email-subject">Your Google Account security review</div>
+              <div class="email-body-mock">
+                Hi [Name], your recent sign-in was verified. No action needed.
+                Visit <span class="safe-link">myaccount.google.com</span> to manage settings.
+              </div>
+            </div>
+            <ul class="email-notes">
+              <li>✅ Correct domain (@google.com)</li>
+              <li>✅ No urgent pressure</li>
+              <li>✅ No password requests</li>
+              <li>✅ Official link format</li>
+            </ul>
+          </div>
+          <div class="email-card phishing">
+            <div class="email-label phish-label">🎣 PHISHING</div>
+            <div class="email-mock">
+              <div class="email-header-mock">
+                <strong>From:</strong> security@g00gle-alerts.net
+                <span class="email-danger">⚠ Suspicious</span>
+              </div>
+              <div class="email-subject">⚠️ URGENT: Your account has been compromised!</div>
+              <div class="email-body-mock">
+                ALERT! Verify your account NOW or it will be DELETED in 24 hours!
+                Click here: <span class="danger-link">g00gle-secure-login.xyz/verify</span>
+              </div>
+            </div>
+            <ul class="email-notes">
+              <li>🔴 Fake domain (g00gle)</li>
+              <li>🔴 Creates panic & urgency</li>
+              <li>🔴 Suspicious external link</li>
+              <li>🔴 Threatening language</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPES OF PHISHING SECTION -->
+  <section id="types" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">// MODULE 02</div>
+        <h2 class="section-title">Types of <span class="neon">Phishing Attacks</span></h2>
+        <p class="section-subtitle">Know your enemy — recognize every form of phishing</p>
+      </div>
+      <div class="types-grid">
+
+        <div class="type-card glass-card" data-animate="fade-up" style="--delay:0">
+          <div class="type-icon">📧</div>
+          <div class="type-badge">MOST COMMON</div>
+          <h3>Email Phishing</h3>
+          <p>Mass fraudulent emails sent from fake domains impersonating banks, services, or IT departments to steal credentials.</p>
+          <div class="type-threat">Threat Level: <span class="threat-high">HIGH</span></div>
+        </div>
+
+        <div class="type-card glass-card" data-animate="fade-up" style="--delay:1">
+          <div class="type-icon">📱</div>
+          <div class="type-badge">GROWING</div>
+          <h3>Smishing</h3>
+          <p>SMS-based phishing attacks. Fake text messages claiming to be from delivery services, banks, or government agencies.</p>
+          <div class="type-threat">Threat Level: <span class="threat-high">HIGH</span></div>
+        </div>
+
+        <div class="type-card glass-card" data-animate="fade-up" style="--delay:2">
+          <div class="type-icon">📞</div>
+          <div class="type-badge">DECEPTIVE</div>
+          <h3>Vishing</h3>
+          <p>Voice phishing via phone calls. Attackers impersonate tech support, IRS agents, or bank representatives to extract data.</p>
+          <div class="type-threat">Threat Level: <span class="threat-med">MEDIUM</span></div>
+        </div>
+
+        <div class="type-card glass-card" data-animate="fade-up" style="--delay:3">
+          <div class="type-icon">🎯</div>
+          <div class="type-badge">TARGETED</div>
+          <h3>Spear Phishing</h3>
+          <p>Highly personalized attacks targeting specific individuals or organizations. Uses personal details gathered from social media.</p>
+          <div class="type-threat">Threat Level: <span class="threat-critical">CRITICAL</span></div>
+        </div>
+
+        <div class="type-card glass-card" data-animate="fade-up" style="--delay:4">
+          <div class="type-icon">🔄</div>
+          <div class="type-badge">ADVANCED</div>
+          <h3>Clone Phishing</h3>
+          <p>An exact copy of a legitimate email is created with malicious links/attachments, appearing to come from the original sender.</p>
+          <div class="type-threat">Threat Level: <span class="threat-critical">CRITICAL</span></div>
+        </div>
+
+        <div class="type-card glass-card" data-animate="fade-up" style="--delay:5">
+          <div class="type-icon">🐋</div>
+          <div class="type-badge">EXECUTIVE</div>
+          <h3>Whaling</h3>
+          <p>Spear phishing targeting high-profile executives (CEOs, CFOs). These attacks aim for maximum financial or data impact.</p>
+          <div class="type-threat">Threat Level: <span class="threat-critical">CRITICAL</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL ENGINEERING SECTION -->
+  <section id="social-eng" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">// MODULE 03</div>
+        <h2 class="section-title">Understanding <span class="neon">Social Engineering</span></h2>
+        <p class="section-subtitle">How attackers manipulate human psychology to bypass security</p>
+      </div>
+
+      <div class="se-layout">
+        <div class="terminal-box" data-animate="fade-left">
+          <div class="terminal-header">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title">attacker_playbook.sh</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">identify_target</span></div>
+            <div class="t-line"><span class="t-out">> Target selected: corporate_employee@company.com</span></div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">gather_intel --source linkedin,instagram</span></div>
+            <div class="t-line"><span class="t-out">> Found: Name, Job Title, Manager, Company</span></div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">craft_phishing_email --tactic URGENCY</span></div>
+            <div class="t-line"><span class="t-out">> Email crafted with fake IT support identity</span></div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">deploy_attack --vector email</span></div>
+            <div class="t-line t-warning"><span class="t-out">⚠ Attack deployed. Awaiting victim response...</span></div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-blink">_</span></div>
+          </div>
+        </div>
+
+        <div class="se-tactics" data-animate="fade-right">
+          <div class="tactic-card glass-card">
+            <div class="tactic-icon">😰</div>
+            <div class="tactic-content">
+              <h3>Fear & Threats</h3>
+              <p>"Your account will be suspended unless you verify NOW." Attackers trigger panic to bypass rational thinking.</p>
+            </div>
+          </div>
+          <div class="tactic-card glass-card">
+            <div class="tactic-icon">⏰</div>
+            <div class="tactic-content">
+              <h3>False Urgency</h3>
+              <p>"You have 24 hours to respond!" Artificial time pressure prevents victims from pausing to verify authenticity.</p>
+            </div>
+          </div>
+          <div class="tactic-card glass-card">
+            <div class="tactic-icon">🎭</div>
+            <div class="tactic-content">
+              <h3>Impersonation</h3>
+              <p>Pretending to be a CEO, IT admin, bank, or government official to gain trust and compliance.</p>
+            </div>
+          </div>
+          <div class="tactic-card glass-card">
+            <div class="tactic-icon">🎁</div>
+            <div class="tactic-content">
+              <h3>False Rewards</h3>
+              <p>"You've won a prize! Click to claim." Greed and curiosity are exploited to trick users into clicking malicious links.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFE ONLINE BEHAVIOR SECTION -->
+  <section id="safety" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">// MODULE 04</div>
+        <h2 class="section-title">Stay <span class="neon">Cyber Safe</span></h2>
+        <p class="section-subtitle">Essential practices to protect yourself online</p>
+      </div>
+      <div class="safety-grid">
+
+        <div class="safety-card glass-card" data-animate="fade-up" style="--delay:0">
+          <div class="safety-icon-wrap">
+            <div class="safety-icon">🔗</div>
+          </div>
+          <h3>Verify Links</h3>
+          <p>Always hover over links before clicking. Check the actual URL — look for misspellings or unusual domains.</p>
+          <div class="safety-tip">TIP: Use <span class="neon">virustotal.com</span> to scan suspicious URLs</div>
+        </div>
+
+        <div class="safety-card glass-card" data-animate="fade-up" style="--delay:1">
+          <div class="safety-icon-wrap">
+            <div class="safety-icon">🔐</div>
+          </div>
+          <h3>Enable MFA</h3>
+          <p>Multi-Factor Authentication adds a second layer of security. Even if your password is stolen, attackers can't get in.</p>
+          <div class="safety-tip">TIP: Use authenticator apps over SMS</div>
+        </div>
+
+        <div class="safety-card glass-card" data-animate="fade-up" style="--delay:2">
+          <div class="safety-icon-wrap">
+            <div class="safety-icon">🔑</div>
+          </div>
+          <h3>Strong Passwords</h3>
+          <p>Use 12+ character passwords with a mix of letters, numbers, and symbols. Never reuse passwords across sites.</p>
+          <div class="safety-tip">TIP: Use a password manager</div>
+        </div>
+
+        <div class="safety-card glass-card" data-animate="fade-up" style="--delay:3">
+          <div class="safety-icon-wrap">
+            <div class="safety-icon">⬇️</div>
+          </div>
+          <h3>Safe Downloads</h3>
+          <p>Only download software from official sources. Avoid cracked software — it often contains malware and spyware.</p>
+          <div class="safety-tip">TIP: Scan files with antivirus before opening</div>
+        </div>
+
+        <div class="safety-card glass-card" data-animate="fade-up" style="--delay:4">
+          <div class="safety-icon-wrap">
+            <div class="safety-icon">📡</div>
+          </div>
+          <h3>Secure Wi-Fi</h3>
+          <p>Avoid entering sensitive data on public Wi-Fi. Use a VPN to encrypt your connection and protect your data.</p>
+          <div class="safety-tip">TIP: Use WPA3 encryption on home networks</div>
+        </div>
+
+        <div class="safety-card glass-card" data-animate="fade-up" style="--delay:5">
+          <div class="safety-icon-wrap">
+            <div class="safety-icon">🔄</div>
+          </div>
+          <h3>Keep Updated</h3>
+          <p>Regularly update your OS, browser, and apps. Security patches fix vulnerabilities that attackers exploit.</p>
+          <div class="safety-tip">TIP: Enable automatic updates</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE QUIZ SECTION -->
+  <section id="quiz" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">// MODULE 05</div>
+        <h2 class="section-title">Phishing <span class="neon">Awareness Quiz</span></h2>
+        <p class="section-subtitle">Test your cybersecurity knowledge — are you phishing-proof?</p>
+      </div>
+
+      <div class="quiz-container">
+        <!-- Quiz Start Screen -->
+        <div id="quizStart" class="quiz-start glass-card">
+          <div class="quiz-start-icon">🛡️</div>
+          <h3>Ready to Test Your Skills?</h3>
+          <p>10 questions covering phishing, social engineering, and online safety best practices.</p>
+          <div class="quiz-meta">
+            <span>⏱ ~3 mins</span>
+            <span>📋 10 questions</span>
+            <span>🏆 Score tracked</span>
+          </div>
+          <button class="btn-primary" id="startQuizBtn">Begin Training Assessment</button>
+        </div>
+
+        <!-- Quiz Active -->
+        <div id="quizActive" class="quiz-active hidden">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+          <div class="quiz-header-info">
+            <span id="questionCounter">Question 1 / 10</span>
+            <span id="scoreDisplay">Score: 0</span>
+          </div>
+          <div class="question-card glass-card">
+            <div class="question-num" id="questionNum">01</div>
+            <h3 class="question-text" id="questionText"></h3>
+            <div class="options-grid" id="optionsGrid"></div>
+          </div>
+        </div>
+
+        <!-- Quiz Result -->
+        <div id="quizResult" class="quiz-result hidden glass-card">
+          <div class="result-icon" id="resultIcon">🏆</div>
+          <h3 class="result-title" id="resultTitle">Training Complete!</h3>
+          <div class="result-score">
+            <span id="finalScore">0</span>
+            <span class="score-denom">/ 10</span>
+          </div>
+          <p class="result-message" id="resultMessage"></p>
+          <div class="result-breakdown" id="resultBreakdown"></div>
+          <div class="result-buttons">
+            <button class="btn-primary" id="retakeQuizBtn">Retake Quiz</button>
+            <a href="#safety" class="btn-secondary">Review Tips</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENTATION SECTION -->
+  <section id="presentation" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">// MODULE 06</div>
+        <h2 class="section-title">SafeBait <span class="neon">Presentation</span></h2>
+        <p class="section-subtitle">Download or view the full cybersecurity awareness presentation</p>
+      </div>
+
+      <div class="presentation-layout">
+        <div class="presentation-preview glass-card" data-animate="fade-left">
+          <div class="pres-mock">
+            <div class="pres-slide slide-1">
+              <div class="pres-logo">SAFEBAIT</div>
+              <div class="pres-tagline">Phishing Awareness Training</div>
+            </div>
+            <div class="pres-slide slide-2">
+              <div class="pres-heading">Types of Attacks</div>
+              <div class="pres-list">
+                <div>📧 Email Phishing</div>
+                <div>📱 Smishing</div>
+                <div>📞 Vishing</div>
+              </div>
+            </div>
+            <div class="pres-slide slide-3">
+              <div class="pres-heading">Stay Protected</div>
+              <div class="pres-stat">91% of attacks start with email</div>
+            </div>
+          </div>
+          <div class="pres-meta">
+            <span>📊 10 Slides</span>
+            <span>🎨 Cyber Theme</span>
+            <span>📁 PDF Format</span>
+          </div>
+        </div>
+
+        <div class="presentation-info" data-animate="fade-right">
+          <h3>SafeBait Awareness Training</h3>
+          <p>
+            A comprehensive cybersecurity awareness presentation covering phishing attacks,
+            social engineering tactics, real-world examples, and actionable defense strategies.
+          </p>
+          <ul class="pres-features">
+            <li>✅ 10-slide cybersecurity awareness presentation</li>
+            <li>✅ Phishing attack types explained</li>
+            <li>✅ Social engineering awareness module</li>
+            <li>✅ Safe online behavior and prevention tips</li>
+            <li>✅ Reporting & incident response guidance</li>
+            <li>✅ Futuristic cyber-themed presentation design</li>
+          </ul>
+          <div class="pres-buttons">
+            <button class="btn-primary" onclick="viewPresentation()">
+              <span>👁</span> View Presentation
+            </button>
+            <button class="btn-secondary" onclick="downloadPresentation()">
+              <span>⬇</span> Download PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section id="cta" class="section cta-section">
+    <div class="cta-bg-grid"></div>
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-shield">🛡️</div>
+        <h2 class="cta-title">Think Before You <span class="neon">Click.</span></h2>
+        <p class="cta-subtitle">
+          Every click matters. Cybercriminals are counting on your moment of distraction.
+          Stay vigilant. Stay educated. Stay safe.
+        </p>
+        <div class="cta-pills">
+          <span class="pill">🔍 Verify Sources</span>
+          <span class="pill">🔐 Enable MFA</span>
+          <span class="pill">📚 Stay Informed</span>
+          <span class="pill">🚨 Report Suspicious Activity</span>
+        </div>
+        <a href="#quiz" class="btn-primary cta-btn">Start Your Training Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">⚡ Safe<span class="neon">Bait</span></div>
+          <p>Empowering individuals and organizations with the knowledge to combat phishing and cyber threats.</p>
+          <div class="footer-social">
+            <a href="https://linkedin.com/in/karthikeshwar0617" class="social-link">💼 LinkedIn</a>
+            <a href="https://github.com/KarthikeshwarAnanthapur" class="social-link">👾 GitHub</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Training</h4>
+          <a href="#about">What is Phishing?</a>
+          <a href="#types">Attack Types</a>
+          <a href="#social-eng">Social Engineering</a>
+          <a href="#safety">Safety Tips</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#quiz">Awareness Quiz</a>
+          <a href="#presentation">Presentation</a>
+          <a href="#">Report Phishing</a>
+          <a href="#">Cybersecurity Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Stats</h4>
+          <div class="footer-stat">
+            <span class="neon">3.4B</span> phishing emails/day
+          </div>
+          <div class="footer-stat">
+            <span class="neon">91%</span> attacks via email
+          </div>
+          <div class="footer-stat">
+            <span class="neon">$4.5M</span> avg breach cost
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SafeBait — Interactive Phishing Awareness Platform</p>
+        <p>Built for cybersecurity education & awareness training</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
